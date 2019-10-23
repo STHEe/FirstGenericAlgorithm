@@ -10,15 +10,12 @@ class DNA {
   }
 
   randomChar() {
-    let ascii_low = 97;
-    let ascii_high = 124;
+    let ascii_low = 32;
+    let ascii_high = 90;
 
     let random_ascii = Math.floor((Math.random() * (ascii_high - ascii_low)) + ascii_low);
 
-    if (random_ascii > 122)
-      return ' '
-    else
-      return String.fromCharCode(random_ascii)
+    return String.fromCharCode(random_ascii)
   }
 
   gerarGenes() {

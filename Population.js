@@ -5,7 +5,7 @@ class Population {
     taxaDeMutation
   ) {
     this.max = maxPopulation;
-    this.goal = match.toLowerCase().split("");
+    this.goal = match.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split("");
     this.taxaDeMutation = taxaDeMutation;
     this.encontrou = false;
     this.generations = 0;
